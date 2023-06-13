@@ -58,6 +58,8 @@
 #include <netinet/in.h>
 #elif defined HAVE_WINSOCK2_H
 #include <winsock2.h>
+#elif defined HAVE_LWIP_H
+#include <lwip/def.h>
 #else
 #error "Platform not recognized"
 #endif

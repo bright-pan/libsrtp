@@ -46,6 +46,7 @@
 #define CRYPTO_ALLOC_H
 
 #include "datatypes.h"
+#include <stddef.h>
 
 #ifdef __cplusplus
 extern "C" {
