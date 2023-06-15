@@ -81,6 +81,9 @@ typedef struct {
     srtp_cipher_direction_t dir;
 } srtp_aes_gcm_ctx_t;
 
+extern const srtp_cipher_type_t srtp_aes_gcm_128;
+extern const srtp_cipher_type_t srtp_aes_gcm_256;
+
 #endif /* MBEDTLS */
 
 #ifdef NSS

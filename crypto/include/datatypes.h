@@ -46,7 +46,7 @@
 #ifndef DATATYPES_H
 #define DATATYPES_H
 
-#include "integers.h" /* definitions of uint32_t, et cetera   */
+//#include "integers.h" /* definitions of uint32_t, et cetera   */
 #include "alloc.h"
 
 #include <stdarg.h>
@@ -58,7 +58,7 @@
 #include <netinet/in.h>
 #elif defined HAVE_WINSOCK2_H
 #include <winsock2.h>
-#elif defined HAVE_LWIP_H
+#elif defined CONFIG_LIBSRTP_USE_LWIP
 #include <lwip/def.h>
 #else
 #error "Platform not recognized"

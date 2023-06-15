@@ -39,12 +39,28 @@ build_config:
   cflag: '-fexpensive-optimizations -funroll-loops'
   include:
     - include
+  internal_include:
     - crypto/include
 
 # source_file:                             # <可选项> 指定参与编译的源代码文件，支持通配符，采用相对路径
 #   - src/*.c                              # 例：组件 src 目录下所有的扩展名为 c 的源代码文件
 source_file:
-  - "crypto/*.c"
+  - "crypto/cipher/cipher.c"
+  - "crypto/cipher/null_cipher.c"
+  - "crypto/cipher/aes_icm_mbedtls.c"
+  - "crypto/cipher/aes_gcm_mbedtls.c"
+  - "crypto/kernel/key.c"
+  - "crypto/cipher/cipher_test_cases.c"
+  - "crypto/math/datatypes.c"
+  - "crypto/hash/auth.c"
+  - "crypto/hash/null_auth.c"
+  - "crypto/hash/auth_test_cases.c"
+  - "crypto/hash/hmac_mbedtls.c"
+  - "crypto/kernel/alloc.c"
+  - "crypto/kernel/err.c"
+  - "crypto/kernel/crypto_kernel.c"
+  - "crypto/replay/rdb.c"
+  - "crypto/replay/rdbx.c"
   - "srtp/*.c"
 
 ## 第五部分：配置信息
@@ -54,7 +70,7 @@ source_file:
 #   CONFIG_CLI: y
 def_config:
     CONFIG_COMP_LIBSRTP: y
-    #SIZEOF_UNSIGNED_LONG: 8
+    CONFIG_LIBSRTP_USE_LWIP: y
 
 ## 第六部分：安装信息
 # install:

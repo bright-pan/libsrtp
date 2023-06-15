@@ -37,8 +37,10 @@
 #ifndef AUTH_TEST_CASES_H
 #define AUTH_TEST_CASES_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
+#if !defined(LIBSRTP_CONFIG_FILE)
+#include "libsrtp_config.h"
+#else
+#include LIBSRTP_CONFIG_FILE
 #endif
 
 #include "auth.h"

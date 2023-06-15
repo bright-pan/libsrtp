@@ -75,6 +75,10 @@ typedef struct {
     mbedtls_aes_context *ctx;
 } srtp_aes_icm_ctx_t;
 
+extern const srtp_cipher_type_t srtp_aes_icm_128;
+extern const srtp_cipher_type_t srtp_aes_icm_192;
+extern const srtp_cipher_type_t srtp_aes_icm_256;
+
 #endif /* MBEDTLS */
 
 #ifdef NSS

@@ -43,7 +43,11 @@
  */
 
 // Leave this as the top level import. Ensures the existence of defines
-#include "config.h"
+#if !defined(LIBSRTP_CONFIG_FILE)
+#include "libsrtp_config.h"
+#else
+#include LIBSRTP_CONFIG_FILE
+#endif
 
 #include "srtp_priv.h"
 #include "stream_list_priv.h"

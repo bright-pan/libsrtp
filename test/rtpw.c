@@ -50,8 +50,10 @@
  *
  */
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
+#if !defined(LIBSRTP_CONFIG_FILE)
+#include "libsrtp_config.h"
+#else
+#include LIBSRTP_CONFIG_FILE
 #endif
 
 #include "getopt_s.h" /* for local getopt()  */
