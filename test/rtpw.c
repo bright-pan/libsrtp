@@ -51,7 +51,7 @@
  */
 
 #if !defined(LIBSRTP_CONFIG_FILE)
-#include "libsrtp_config.h"
+#include "config.h"
 #else
 #include LIBSRTP_CONFIG_FILE
 #endif

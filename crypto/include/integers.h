@@ -46,6 +46,11 @@
 #ifndef INTEGERS_H
 #define INTEGERS_H
 
+#if !defined(LIBSRTP_CONFIG_FILE)
+#include "config.h"
+#else
+#include LIBSRTP_CONFIG_FILE
+#endif
 /* use standard integer definitions, if they're available  */
 #ifdef HAVE_STDLIB_H
 #include <stdlib.h>

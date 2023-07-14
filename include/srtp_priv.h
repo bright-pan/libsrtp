@@ -46,7 +46,11 @@
 #define SRTP_PRIV_H
 
 // Leave this as the top level import. Ensures the existence of defines
+#if !defined(LIBSRTP_CONFIG_FILE)
 #include "config.h"
+#else
+#include LIBSRTP_CONFIG_FILE
+#endif
 
 #include "srtp.h"
 #include "rdbx.h"

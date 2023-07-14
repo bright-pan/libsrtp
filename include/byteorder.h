@@ -11,7 +11,7 @@
 #ifndef __BYTEORDER_H__
 #define __BYTEORDER_H__
 
-//#include <ble_types/types.h>
+#include <inttypes.h>
 #include <stddef.h>
 //#include <misc/__assert.h>
 

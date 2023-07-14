@@ -70,7 +70,7 @@ source_file:
 #   CONFIG_CLI: y
 def_config:
     CONFIG_COMP_LIBSRTP: y
-    CONFIG_LIBSRTP_USE_LWIP: y
+    LIBSRTP_CONFIG_FILE: "libsrtp_config.h"
 
 ## 第六部分：安装信息
 # install:
