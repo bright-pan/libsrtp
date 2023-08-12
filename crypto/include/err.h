@@ -134,9 +134,9 @@ typedef struct {
 #define debug_print0(mod, format)                                              \
     if (mod.on)                                                                \
     srtp_err_report(srtp_err_level_debug, ("%s: " format "\n"), mod.name)
-#define debug_print(mod, format, arg)                                          \
+#define debug_print(mod, format, ...)                                          \
     if (mod.on)                                                                \
-    srtp_err_report(srtp_err_level_debug, ("%s: " format "\n"), mod.name, arg)
+    srtp_err_report(srtp_err_level_debug, ("%s: " format "\n"), mod.name, __VA_ARGS__)
 #define debug_print2(mod, format, arg1, arg2)                                  \
     if (mod.on)                                                                \
     srtp_err_report(srtp_err_level_debug, ("%s: " format "\n"), mod.name,      \
